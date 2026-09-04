@@ -64,7 +64,7 @@ export default function HotelBooking() {
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
                     className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-navy font-semibold py-2.5 rounded-xl transition-colors duration-300"
                   >
-                    View Package
+                    View Hotels
                   </button>
                   <button
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}

@@ -60,7 +60,7 @@ export default function CarBooking() {
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
                     className="w-full sm:w-auto inline-block border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-medium px-6 py-2 rounded-full transition-colors duration-300"
                   >
-                    View Package
+                    View Cars
                   </button>
                   <button
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}

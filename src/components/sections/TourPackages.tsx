@@ -4,6 +4,7 @@ import Image from "next/image";
 import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const tours = [
@@ -58,15 +59,13 @@ export default function TourPackages() {
                     {tour.description}
                   </p>
                   <div className="flex items-center justify-between mt-4">
-                    <button 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        openWhatsApp(PREDEFINED_MESSAGES.tour);
-                      }}
+                    <Link 
+                      href={`/packages/${tour.title.toLowerCase()}`}
+                      onClick={(e) => e.stopPropagation()}
                       className="text-white text-sm font-medium hover:text-brand-gold transition-colors duration-300 border border-white hover:border-brand-gold px-4 py-1.5 rounded-full"
                     >
                       View Package
-                    </button>
+                    </Link>
                     <button 
                       className="flex items-center text-brand-gold font-medium hover:text-white transition-colors duration-300"
                       onClick={(e) => {
