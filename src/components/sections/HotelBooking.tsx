@@ -59,12 +59,20 @@ export default function HotelBooking() {
                 <p className="text-gray-300 mb-6 line-clamp-2">
                   {hotel.description}
                 </p>
-                <button
-                  onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
-                  className="w-full bg-white text-brand-navy hover:bg-brand-gold hover:text-white font-semibold py-3 rounded-xl transition-colors duration-300"
-                >
-                  Book Now
-                </button>
+                <div className="flex flex-col sm:flex-row items-center gap-3">
+                  <button
+                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
+                    className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-navy font-semibold py-2.5 rounded-xl transition-colors duration-300"
+                  >
+                    View Package
+                  </button>
+                  <button
+                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
+                    className="w-full bg-brand-gold text-white hover:bg-white hover:text-brand-navy font-semibold py-3 rounded-xl transition-colors duration-300 border-2 border-brand-gold hover:border-white"
+                  >
+                    Book Now
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}

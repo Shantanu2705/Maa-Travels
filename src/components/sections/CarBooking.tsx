@@ -55,12 +55,20 @@ export default function CarBooking() {
                 <p className="text-gray-600 mb-6 min-h-[48px]">
                   {car.description}
                 </p>
-                <button
-                  onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
-                  className="inline-block border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white font-medium px-8 py-2 rounded-full transition-colors duration-300"
-                >
-                  Book Now
-                </button>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
+                  <button
+                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
+                    className="w-full sm:w-auto inline-block border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-medium px-6 py-2 rounded-full transition-colors duration-300"
+                  >
+                    View Package
+                  </button>
+                  <button
+                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
+                    className="w-full sm:w-auto inline-block border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white font-medium px-6 py-2 rounded-full transition-colors duration-300"
+                  >
+                    Book Now
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}

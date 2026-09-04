@@ -8,17 +8,17 @@ import { ArrowRight } from "lucide-react";
 
 const tours = [
   {
-    title: "Mountain Escape",
+    title: "Sikkim",
     description: "Experience the serene beauty of the mountains and refreshing misty mornings.",
     image: "/images/tour-1.jpg",
   },
   {
-    title: "Nature Getaway",
+    title: "Darjeeling",
     description: "Relax in lush green surroundings and reconnect with nature.",
     image: "/images/tour-2.jpg",
   },
   {
-    title: "Weekend Escape",
+    title: "Dooars",
     description: "Quick and refreshing getaways to recharge your energy.",
     image: "/images/tour-3.jpg",
   },
@@ -57,9 +57,26 @@ export default function TourPackages() {
                   <p className="text-gray-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     {tour.description}
                   </p>
-                  <div className="flex items-center text-brand-gold font-medium">
-                    <span>Book Now</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                  <div className="flex items-center justify-between mt-4">
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openWhatsApp(PREDEFINED_MESSAGES.tour);
+                      }}
+                      className="text-white text-sm font-medium hover:text-brand-gold transition-colors duration-300 border border-white hover:border-brand-gold px-4 py-1.5 rounded-full"
+                    >
+                      View Package
+                    </button>
+                    <button 
+                      className="flex items-center text-brand-gold font-medium hover:text-white transition-colors duration-300"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openWhatsApp(PREDEFINED_MESSAGES.tour);
+                      }}
+                    >
+                      <span>Book Now</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                    </button>
                   </div>
                 </div>
               </div>
