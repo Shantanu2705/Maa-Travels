@@ -10,7 +10,7 @@ export default function CTA() {
     <section className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/cta-bg.jpg"
+          src="/images/tour-1.jpg"
           alt="Ready for your next journey"
           fill
           className="object-cover"
