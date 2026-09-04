@@ -5,8 +5,9 @@ import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import CTA from "@/components/sections/CTA";
 import { cars } from "@/lib/data";
 
-export default function CarDetails({ params }: { params: { id: string } }) {
-  const carDetails = cars.find((c) => c.id === params.id);
+export default async function CarDetails({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const carDetails = cars.find((c) => c.id === resolvedParams.id);
 
   if (!carDetails) {
     return (

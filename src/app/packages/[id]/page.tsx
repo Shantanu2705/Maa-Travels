@@ -6,8 +6,9 @@ import CTA from "@/components/sections/CTA";
 
 import { tours } from "@/lib/data";
 
-export default function PackageDetails({ params }: { params: { id: string } }) {
-  const packageDetails = tours.find((t) => t.id === params.id);
+export default async function PackageDetails({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const packageDetails = tours.find((t) => t.id === resolvedParams.id);
 
   if (!packageDetails) {
     return (

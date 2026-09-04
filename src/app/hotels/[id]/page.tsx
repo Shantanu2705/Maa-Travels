@@ -5,8 +5,9 @@ import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import CTA from "@/components/sections/CTA";
 import { hotels } from "@/lib/data";
 
-export default function HotelDetails({ params }: { params: { id: string } }) {
-  const hotelDetails = hotels.find((h) => h.id === params.id);
+export default async function HotelDetails({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const hotelDetails = hotels.find((h) => h.id === resolvedParams.id);
 
   if (!hotelDetails) {
     return (
