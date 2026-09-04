@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Star, MapPin, Sparkles } from "lucide-react";
-import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
+import { getWhatsAppUrl, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import CTA from "@/components/sections/CTA";
 import { hotels } from "@/lib/data";
 
@@ -72,12 +72,14 @@ export default async function HotelDetails({ params }: { params: Promise<{ id: s
               </ul>
             </div>
 
-            <button
-              onClick={() => openWhatsApp(`${PREDEFINED_MESSAGES.hotel} I am interested in booking the ${hotelDetails.title} hotel.`)}
-              className="bg-brand-gold hover:bg-brand-yellow text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors duration-300 w-full sm:w-auto text-center shadow-md hover:shadow-lg"
+            <a
+              href={getWhatsAppUrl(`${PREDEFINED_MESSAGES.hotel} I am interested in booking the ${hotelDetails.title} hotel.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-gold hover:bg-brand-yellow text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors duration-300 w-full sm:w-auto text-center shadow-md hover:shadow-lg"
             >
               Book This Hotel
-            </button>
+            </a>
           </div>
         </div>
       </div>

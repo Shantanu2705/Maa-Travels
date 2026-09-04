@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
+import { getWhatsAppUrl, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import CTA from "@/components/sections/CTA";
 
 import { tours } from "@/lib/data";
@@ -62,12 +62,14 @@ export default async function PackageDetails({ params }: { params: Promise<{ id:
               ))}
             </ul>
 
-            <button
-              onClick={() => openWhatsApp(`${PREDEFINED_MESSAGES.tour} I am interested in the ${packageDetails.title} package.`)}
-              className="bg-brand-gold hover:bg-brand-yellow text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors duration-300 w-full sm:w-auto text-center"
+            <a
+              href={getWhatsAppUrl(`${PREDEFINED_MESSAGES.tour} I am interested in the ${packageDetails.title} package.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-gold hover:bg-brand-yellow text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors duration-300 w-full sm:w-auto text-center"
             >
               Book This Package
-            </button>
+            </a>
           </div>
         </div>
       </div>
