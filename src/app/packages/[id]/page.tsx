@@ -4,37 +4,10 @@ import { ArrowLeft } from "lucide-react";
 import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import CTA from "@/components/sections/CTA";
 
-// In a real app, this would come from a database or CMS
-const getPackageDetails = (id: string) => {
-  const packages = {
-    sikkim: {
-      title: "Sikkim",
-      description: "Experience the serene beauty of the mountains and refreshing misty mornings. Explore the breathtaking landscapes, beautiful monasteries, and vibrant culture of Sikkim.",
-      image: "/images/tour-1.jpg",
-      highlights: ["Gangtok sightseeing", "Tsomgo Lake", "Baba Mandir", "Nathula Pass (optional)", "Pelling"],
-      duration: "5 Nights / 6 Days",
-    },
-    darjeeling: {
-      title: "Darjeeling",
-      description: "Relax in lush green surroundings and reconnect with nature. Wake up to the stunning views of Mt. Kanchenjunga and enjoy the world-famous Darjeeling tea.",
-      image: "/images/tour-2.jpg",
-      highlights: ["Tiger Hill sunrise", "Batasia Loop", "Tea Gardens", "Himalayan Mountaineering Institute", "Mirik Lake"],
-      duration: "3 Nights / 4 Days",
-    },
-    dooars: {
-      title: "Dooars",
-      description: "Quick and refreshing getaways to recharge your energy. Discover the rich wildlife and dense forests of the Dooars region.",
-      image: "/images/tour-3.jpg",
-      highlights: ["Jaldapara National Park", "Gorumara National Park", "Buxa Tiger Reserve", "Murti River", "Tea Estate Visit"],
-      duration: "4 Nights / 5 Days",
-    },
-  };
-
-  return packages[id as keyof typeof packages] || null;
-};
+import { tours } from "@/lib/data";
 
 export default function PackageDetails({ params }: { params: { id: string } }) {
-  const packageDetails = getPackageDetails(params.id);
+  const packageDetails = tours.find((t) => t.id === params.id);
 
   if (!packageDetails) {
     return (

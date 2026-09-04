@@ -5,23 +5,8 @@ import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
 
-const cars = [
-  {
-    category: "Comfortable Sedan",
-    description: "Perfect for couples and small families for a smooth ride.",
-    image: "/images/car-sedan.jpg",
-  },
-  {
-    category: "Spacious SUV",
-    description: "Ideal for families and longer journeys needing extra space.",
-    image: "/images/car-suv.jpg",
-  },
-  {
-    category: "Premium Travel",
-    description: "Travel in extra comfort and style for special journeys.",
-    image: "/images/car-premium.jpg",
-  },
-];
+import Link from "next/link";
+import { cars } from "@/lib/data";
 
 export default function CarBooking() {
   return (
@@ -56,12 +41,12 @@ export default function CarBooking() {
                   {car.description}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
-                  <button
-                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
-                    className="w-full sm:w-auto inline-block border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-medium px-6 py-2 rounded-full transition-colors duration-300"
+                  <Link
+                    href={`/cars/${car.id}`}
+                    className="w-full sm:w-auto inline-block border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white font-medium px-6 py-2 rounded-full text-center transition-colors duration-300"
                   >
                     View Cars
-                  </button>
+                  </Link>
                   <button
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.car)}
                     className="w-full sm:w-auto inline-block border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-white font-medium px-6 py-2 rounded-full transition-colors duration-300"

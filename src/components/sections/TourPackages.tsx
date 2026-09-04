@@ -7,23 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const tours = [
-  {
-    title: "Sikkim",
-    description: "Experience the serene beauty of the mountains and refreshing misty mornings.",
-    image: "/images/tour-1.jpg",
-  },
-  {
-    title: "Darjeeling",
-    description: "Relax in lush green surroundings and reconnect with nature.",
-    image: "/images/tour-2.jpg",
-  },
-  {
-    title: "Dooars",
-    description: "Quick and refreshing getaways to recharge your energy.",
-    image: "/images/tour-3.jpg",
-  },
-];
+import { tours } from "@/lib/data";
 
 export default function TourPackages() {
   return (
@@ -60,7 +44,7 @@ export default function TourPackages() {
                   </p>
                   <div className="flex items-center justify-between mt-4">
                     <Link 
-                      href={`/packages/${tour.title.toLowerCase()}`}
+                      href={`/packages/${tour.id}`}
                       onClick={(e) => e.stopPropagation()}
                       className="text-white text-sm font-medium hover:text-brand-gold transition-colors duration-300 border border-white hover:border-brand-gold px-4 py-1.5 rounded-full"
                     >

@@ -5,20 +5,8 @@ import { openWhatsApp, PREDEFINED_MESSAGES } from "@/lib/whatsapp";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { motion } from "framer-motion";
 
-const hotels = [
-  {
-    image: "/images/hotel-1.jpg",
-    description: "Relax in beautifully designed rooms after a long day of travel.",
-  },
-  {
-    image: "/images/hotel-2.jpg",
-    description: "Enjoy premium resort-style accommodation with great views.",
-  },
-  {
-    image: "/images/hotel-3.jpg",
-    description: "Experience elegant dining and world-class hospitality.",
-  },
-];
+import Link from "next/link";
+import { hotels } from "@/lib/data";
 
 export default function HotelBooking() {
   return (
@@ -37,7 +25,7 @@ export default function HotelBooking() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {hotels.map((hotel, index) => (
             <motion.div
-              key={index}
+              key={hotel.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -60,12 +48,12 @@ export default function HotelBooking() {
                   {hotel.description}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-3">
-                  <button
-                    onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
-                    className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-navy font-semibold py-2.5 rounded-xl transition-colors duration-300"
+                  <Link
+                    href={`/hotels/${hotel.id}`}
+                    className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-navy font-semibold py-2.5 rounded-xl text-center transition-colors duration-300"
                   >
                     View Hotels
-                  </button>
+                  </Link>
                   <button
                     onClick={() => openWhatsApp(PREDEFINED_MESSAGES.hotel)}
                     className="w-full bg-brand-gold text-white hover:bg-white hover:text-brand-navy font-semibold py-3 rounded-xl transition-colors duration-300 border-2 border-brand-gold hover:border-white"
