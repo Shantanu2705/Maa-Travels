@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="#home" className="relative z-50 flex items-center gap-2">
-            <div className="relative h-12 w-40 md:h-14 md:w-48 overflow-hidden rounded">
+            <div className="relative h-16 w-52 md:h-20 md:w-64 overflow-hidden rounded">
               <Image
                 src="/logo/logo.png"
                 alt="Maa Travels Logo"

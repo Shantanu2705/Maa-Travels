@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-6">
             <div className="bg-white p-2 rounded inline-block">
-              <div className="relative h-12 w-40">
+              <div className="relative h-16 w-52">
                 <Image
                   src="/logo/logo.png"
                   alt="Maa Travels Logo"
