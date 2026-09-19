@@ -18,9 +18,9 @@ export default function Partners() {
           subtitle="Trusted travel providers we work with"
         />
         
-        <div className="mt-12 flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-12 flex flex-wrap justify-center items-center gap-10 md:gap-16 transition-opacity duration-300">
           {PARTNERS.map((partner) => (
-            <div key={partner.name} className="relative h-16 w-32 md:h-20 md:w-40 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div key={partner.name} className="relative h-24 w-40 md:h-32 md:w-56 flex items-center justify-center transition-transform hover:scale-105 duration-300">
               <img
                 src={partner.src}
                 alt={`${partner.name} Logo`}
