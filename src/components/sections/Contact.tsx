@@ -45,9 +45,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-brand-gold font-medium mb-1">Phone & WhatsApp</h4>
-                  <p className="text-gray-300 text-lg">
-                    +91 {DISPLAY_NUMBER}
-                  </p>
+                  <div className="text-gray-300 text-lg space-y-1">
+                    <p>Business: +91 9064380776</p>
+                    <p>Emergency: +91 9641316494</p>
+                  </div>
                 </div>
               </div>
             </div>

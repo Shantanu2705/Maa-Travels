@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="#home" className="relative z-50 flex items-center gap-2">
             <div className="relative h-12 w-40 md:h-14 md:w-48 overflow-hidden rounded">
               <Image
-                src="/logo/logo.jpeg"
+                src="/logo/logo.png"
                 alt="Maa Travels Logo"
                 fill
                 className="object-contain object-left"

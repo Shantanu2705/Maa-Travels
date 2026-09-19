@@ -6,6 +6,7 @@ import TourPackages from "@/components/sections/TourPackages";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import CTA from "@/components/sections/CTA";
 import Contact from "@/components/sections/Contact";
+import Partners from "@/components/sections/Partners";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <TourPackages />
       <WhyChooseUs />
       <CTA />
+      <Partners />
       <Contact />
     </>
   );

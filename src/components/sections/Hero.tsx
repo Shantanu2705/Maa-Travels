@@ -28,14 +28,19 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 text-sm font-medium tracking-wider mb-6 uppercase">
-              Premium Travel Services
-            </span>
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-brand-gold/90 backdrop-blur-md text-white font-medium tracking-wide text-sm shadow-lg">
+                19 Years of Experience in Travel Industry
+              </span>
+              <span className="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium tracking-wide text-sm">
+                Cab Services all over North Bengal
+              </span>
+            </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Your Journey Begins With <span className="text-brand-gold">Maa Travels</span>
             </h1>
             <p className="text-lg md:text-2xl text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md">
-              Car bookings, comfortable stays and memorable tour experiences &mdash; all arranged with care.
+              Premium car bookings, comfortable stays and memorable tour experiences &mdash; all arranged with care.
             </p>
           </motion.div>
 

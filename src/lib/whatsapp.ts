@@ -1,5 +1,6 @@
-export const WHATSAPP_NUMBER = "919641316494";
-export const DISPLAY_NUMBER = "9641316494";
+export const WHATSAPP_NUMBER = "919064380776";
+export const DISPLAY_NUMBER = "9064380776";
+export const EMERGENCY_NUMBER = "9641316494";
 
 export function getWhatsAppUrl(message: string): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

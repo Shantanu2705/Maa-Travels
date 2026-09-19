@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="bg-white p-2 rounded inline-block">
               <div className="relative h-12 w-40">
                 <Image
-                  src="/logo/logo.jpeg"
+                  src="/logo/logo.png"
                   alt="Maa Travels Logo"
                   fill
                   className="object-contain object-left"
@@ -76,11 +76,19 @@ export default function Footer() {
                   Siliguri, West Bengal, India.
                 </span>
               </li>
-              <li className="flex items-center gap-3 text-gray-300">
-                <Phone className="w-5 h-5 text-brand-gold shrink-0" />
-                <a href={`tel:+${WHATSAPP_NUMBER}`} className="hover:text-brand-gold transition-colors">
-                  +91 {DISPLAY_NUMBER}
-                </a>
+              <li className="flex flex-col gap-1 text-gray-300">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-brand-gold shrink-0" />
+                  <a href={`tel:+919064380776`} className="hover:text-brand-gold transition-colors">
+                    +91 9064380776
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 shrink-0" />
+                  <a href={`tel:+919641316494`} className="hover:text-brand-gold transition-colors text-sm">
+                    +91 9641316494 (Emergency)
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3 text-gray-300">
                 <MessageCircle className="w-5 h-5 text-brand-gold shrink-0" />
