@@ -3,10 +3,10 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const PARTNERS = [
-  { name: "Air India", src: "https://logo.clearbit.com/airindia.in" },
-  { name: "Indigo", src: "https://logo.clearbit.com/goindigo.in" },
-  { name: "SpiceJet", src: "https://logo.clearbit.com/spicejet.com" },
-  { name: "IRCTC", src: "https://logo.clearbit.com/irctc.co.in" },
+  { name: "Air India", src: "/partners/air_india.svg" },
+  { name: "Indigo", src: "/partners/indigo.svg" },
+  { name: "SpiceJet", src: "/partners/spicejet.svg" },
+  { name: "IRCTC", src: "/partners/irctc.svg" },
 ];
 
 export default function Partners() {
