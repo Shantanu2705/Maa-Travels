@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const PARTNERS = [
-  { name: "Air India", src: "/partners/air_india.png" },
-  { name: "Indigo", src: "/partners/indigo.png" },
-  { name: "SpiceJet", src: "/partners/spicejet.png" },
-  { name: "IRCTC", src: "/partners/irctc.png" },
+  { name: "Air India", src: "https://logo.clearbit.com/airindia.in" },
+  { name: "Indigo", src: "https://logo.clearbit.com/goindigo.in" },
+  { name: "SpiceJet", src: "https://logo.clearbit.com/spicejet.com" },
+  { name: "IRCTC", src: "https://logo.clearbit.com/irctc.co.in" },
 ];
 
 export default function Partners() {
@@ -21,12 +20,12 @@ export default function Partners() {
         
         <div className="mt-12 flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-300">
           {PARTNERS.map((partner) => (
-            <div key={partner.name} className="relative h-16 w-32 md:h-20 md:w-40 grayscale hover:grayscale-0 transition-all duration-300">
-              <Image
+            <div key={partner.name} className="relative h-16 w-32 md:h-20 md:w-40 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+              <img
                 src={partner.src}
                 alt={`${partner.name} Logo`}
-                fill
-                className="object-contain"
+                className="max-h-full max-w-full object-contain"
+                loading="lazy"
               />
             </div>
           ))}
